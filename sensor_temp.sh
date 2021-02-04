@@ -8,8 +8,8 @@ mkdir -p ./user_and_temp/$data_fold/$hour_fold
 touch ./user_and_temp/$data_fold/$hour_fold/cpu_$currentdate.txt
 txt_path="./user_and_temp/$data_fold/$hour_fold/cpu_$currentdate.txt"
 
-CPU0=`sensors  coretemp-isa-0000 | tail -n +4 | tr -s " " | awk -F [øC+] '{print $1$3}'`
-CPU1=`sensors  coretemp-isa-0001 | tail -n +4 | tr -s " " | awk -F [øC+] '{print $1$3}'`
+CPU0=`sensors  coretemp-isa-0000 | tail -n +4 | tr -s " " | awk -F [Â°C+] '{print $1$3}'`
+CPU1=`sensors  coretemp-isa-0001 | tail -n +4 | tr -s " " | awk -F [Â°C+] '{print $1$3}'`
 temp_zone0=`cat /sys/class/thermal/thermal_zone0/temp`
 temp_zone1=`cat /sys/class/thermal/thermal_zone1/temp`
 
